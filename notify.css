@@ -1,0 +1,71 @@
+/* Coloured Status Boxes */
+.error, .warning, .success, .info, .information, .notice, .timer, .mark, .debug {
+	color: #000000;
+	text-align: left;
+	padding: 10px 20px 10px 60px;
+	width: 50%;
+	margin: auto;
+	border: 2px solid;
+	background-position: 15px 5px;
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	background-origin: border-box;
+}
+
+.error {
+	background-image: url(icon-error.svg);
+	background-color: #ffe4e3;
+	border-color: #e37e79;
+}
+
+.warning {
+	background-image: url(icon-warning.svg);
+	background-color: #fff6bf;
+	border-color: #ffd324;
+}
+
+.success {
+	background-image: url(icon-success.svg);
+	background-color: #e0ffd3;
+	border-color: #88d66b;
+}
+
+.info, .information {
+	background-image: url(icon-information.svg);
+	background-color: #e3f1ff;
+	border-color: #79a6d3;
+}
+
+.notice {
+	background-image: url(icon-notice.svg);
+	background-color: #e3f1ff;
+	border-color: #79a6d3;
+}
+
+.timer {
+	background-image: url(icon-timer.svg);
+	background-color: #e3f1ff;
+	border-color: #79a6d3;
+}
+
+.mark {
+	background-image: url(icon-clock.svg);
+	background-color: #e3f1ff;
+	border-color: #79a6d3;
+}
+
+.debug {
+	background-image: url(icon-debug.svg);
+	background-color: #e3f1ff;
+	border-color: #79a6d3;
+	width: 70%;
+}
+
+.notification img {
+	object-fit: contain;
+	width: 90%;
+}
+
+.notification code {
+	white-space: pre-wrap;
+}
