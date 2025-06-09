@@ -72,8 +72,8 @@ class Notify {
 
   public function printBufferHTML(): void {
     if($this->enabled && !empty($this->notifyBuffer)) {
-      echo '<!-- start notification buffer -->', PHP_EOL,
-           $this->notifyBuffer, PHP_EOL,
+      echo PHP_EOL, '<!-- start notification buffer -->', PHP_EOL,
+           trim($this->notifyBuffer), PHP_EOL,
            '<!-- end notification buffer -->', PHP_EOL;
       $this->notifyBuffer = '';
     }
