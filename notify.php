@@ -31,14 +31,19 @@ class Notify {
     $this->enabled = False;
   }
 
+  public function isEnabled(): bool {
+    return $this->enabled;
+  }
+
   public function now(string $notifyType='info', mixed ...$messages): void {
     if($this->enabled)
       echo $this->getMessageHTML($notifyType, $this->stringifyMessages($messages));
   }
 
   public function buffer(string $notifyType='info', mixed ...$messages): void {
-    $this->notifyBuffer .=
-      $this->getMessageHTML($notifyType, $this->stringifyMessages($messages));
+    if($this->enabled)
+      $this->notifyBuffer .=
+        $this->getMessageHTML($notifyType, $this->stringifyMessages($messages));
   }
 
   private function stringifyMessages(mixed $messages): string {
